@@ -1,0 +1,9 @@
+// app global css in SCSS form
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+.q-card--dark{
+box-shadow: none;
+}
