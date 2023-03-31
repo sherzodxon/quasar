@@ -51,13 +51,13 @@ const linksList = [
     route: { name: "category" },
   },
   {
-    title: "Discord Chat Channel",
-    icon: "chat",
-    route: { name: "home1" },
+    title: "About",
+    icon: "person",
+    route: { name: "about" },
   },
   {
     title: "Contact",
-    icon: "person",
+    icon: "call",
     route: { name: "home2" },
   },
   {

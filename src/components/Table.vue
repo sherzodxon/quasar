@@ -4,7 +4,6 @@
     :rows="row"
     :columns="columns"
     row-key="name"
-    no-box-shadow
     class="costum-table"
     color="primary"
   >
@@ -66,5 +65,5 @@ export default {
   },
 };
 </script>
-  
+
 

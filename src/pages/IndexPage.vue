@@ -6,6 +6,8 @@
       :row="product"
       :removeData="removeData"
       :editData="editData"
+      title="Product"
+
     />
 
     <Pagination />
