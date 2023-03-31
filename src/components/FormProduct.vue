@@ -138,7 +138,7 @@ export default {
             ...newData,
           });
           Notify.create({
-            message: "Editeded",
+            message: "Edited",
             icon: "check",
             color: "positive",
             position: "top",

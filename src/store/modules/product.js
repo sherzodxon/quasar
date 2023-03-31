@@ -36,11 +36,6 @@ const Product = {
       state.product.unshift(data);
     },
   },
-  getters: {
-    doubleCount(state) {
-      return state.count * 2;
-    },
-  },
   actions: {
     async getProduct(context) {
       context.commit("setLoading", true);

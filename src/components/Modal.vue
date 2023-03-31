@@ -1,7 +1,7 @@
 <template>
   <div class="dialog">
     <header class="dialog__header">
-      <div class="text-h5">{{ title }}</div>
+    
     </header>
     <div class="dialog__content">
       <slot name="content"></slot>

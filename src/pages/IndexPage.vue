@@ -7,7 +7,6 @@
       :removeData="removeData"
       :editData="editData"
       title="Product"
-
     />
 
     <Pagination />
@@ -30,7 +29,7 @@ const columns = [
     label: "Name",
     align: "left",
     field: (row) => row.name_uz,
-    format: (val) => `${val}`,
+    format: (value) => `${value}`,
 
   },
   {
@@ -173,59 +172,5 @@ export default {
     background: transparent;
   }
 }
-.gridTable {
-  margin-top: 2rem;
-  color: #fff !important;
-  width: 420px;
-  height: 50px;
-  display: grid;
-  grid-template-areas:
-    "a b c d"
-    "e f f f"
-    "e g h i"
-    "e j k k"
-    "e l l l";
 
-  .table-th {
-    padding: .1rem .2rem;
-    width: 100%;
-    border: 1px solid #fff;
-  }
-  .th-a {
-    grid-area: a;
-  }
-  .th-b {
-    grid-area: b;
-  }
-  .th-c {
-    grid-area: c;
-  }
-  .th-d {
-    grid-area: d;
-  }
-  .th-e {
-    grid-area: e;
-  }
-  .th-f {
-    grid-area: f;
-  }
-  .th-g {
-    grid-area: g;
-  }
-  .th-h {
-    grid-area: h;
-  }
-  .th-i {
-    grid-area: i;
-  }
-  .th-j {
-    grid-area: j;
-  }
-  .th-k {
-    grid-area: k;
-  }
-  .th-l {
-    grid-area: l;
-  }
-}
 </style>
