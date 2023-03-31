@@ -13,7 +13,7 @@
           <q-btn
             flat
             round
-            color="positive"
+            color="teal"
             icon="edit"
             class="q-mx-sm"
             @click="editData(props.row)"

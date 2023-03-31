@@ -11,5 +11,8 @@ name:"AboutPage"
 <style lang="scss" scoped>
 .about-wrapper{
   padding: 20px;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
 }
 </style>

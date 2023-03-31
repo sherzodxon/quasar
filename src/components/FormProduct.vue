@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="alert" class="modal-box">
-    <Modal title="Form Modal" :onClose="onClose">
+    <Modal  :onClose="onClose">
       <template v-slot:content>
         <q-form @submit="onSubmit" class="q-gutter-md">
           <Select class="q-mb-md" v-model="product_type_id" />
@@ -42,7 +42,7 @@
             <q-btn
               label="Submit"
               type="submit"
-              color="primary"
+              color="teal"
               filled
               :disable="loading"
             />

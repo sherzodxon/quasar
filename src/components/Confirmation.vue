@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="alert" class="modal-box">
-    <Modal title="Form Modal" :onClose="onClose">
+    <Modal  :onClose="onClose">
       <template v-slot:content>
         <div class="text-h5">Would You </div>
       </template>

@@ -17,10 +17,6 @@
 export default {
   name: "Modal",
   props: {
-    title: {
-      type: String,
-      default: "Welcome Form",
-    },
     onClose: {
       type: Function,
       required: true,
