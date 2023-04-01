@@ -1,7 +1,6 @@
 <template>
   <div class="dialog">
     <header class="dialog__header">
-    
     </header>
     <div class="dialog__content">
       <slot name="content"></slot>

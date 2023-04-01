@@ -33,14 +33,10 @@
   </q-table>
 </template>
 <script>
-import { mapState, mapActions } from "vuex";
 export default {
   name: "Table",
   data() {
     return {};
-  },
-  computed: {
-    ...mapState("product", ["productLength"]),
   },
   props: {
     columns: {
@@ -60,9 +56,7 @@ export default {
       type: Function,
     },
   },
-  methods: {
-    ...mapActions("product", ["getPagination"]),
-  },
+
 };
 </script>
 

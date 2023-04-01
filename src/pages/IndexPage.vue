@@ -9,7 +9,6 @@
       title="Product"
     />
 
-    <Pagination />
     <q-inner-loading :showing="loading" color="teal" />
   </div>
 </template>
@@ -20,7 +19,6 @@ import { editData } from "../api/useApi";
 import FormProduction from "../components/FormProduct.vue";
 import Table from "src/components/Table.vue";
 import { mapState, mapActions } from "vuex";
-import Pagination from "src/components/Pagination.vue";
 
 const columns = [
   {
@@ -28,9 +26,7 @@ const columns = [
     required: true,
     label: "Name",
     align: "left",
-    field: (row) => row.name_uz,
-    format: (value) => `${value}`,
-
+    field: 'name_uz',
   },
   {
     name: "cost",
@@ -78,24 +74,15 @@ export default {
   },
   components: {
     Table,
-    Pagination,
   },
-  watch: {
-    "$route.query"(value) {
-      this.getPagination(value);
-    },
-  },
+
   methods: {
-    ...mapActions("product", ["getProduct","deleteProduct","getPagination",]),
+    ...mapActions("product", ["getProduct","deleteProduct"]),
     ...mapActions("category", ["getCategory", "getSelectDefaultValue"]),
 
     async loadData() {
       try {
         await this.getProduct();
-        await this.getPagination({
-          page: this.$route.query.page,
-          perPage: this.$route.query.perPage,
-        });
       } catch (error) {
         console.log(error);
       }

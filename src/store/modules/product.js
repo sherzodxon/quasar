@@ -5,15 +5,11 @@ const Product = {
   namespaced: true,
   state: () => ({
     product: [],
-    productLength: 0,
     loading: false,
   }),
   mutations: {
     setProduct(state, data) {
       state.product = data;
-    },
-    setProductLength(state, data) {
-      state.productLength = data.length;
     },
     setLoading(state, isLoading) {
       state.loading = isLoading;
@@ -36,19 +32,15 @@ const Product = {
       state.product.unshift(data);
     },
   },
+
   actions: {
     async getProduct(context) {
       context.commit("setLoading", true);
       const data = await getData(PRODUCT.get_product);
-      context.commit("setProductLength", data);
+      context.commit("setProduct",data)
       context.commit("setLoading", false);
     },
-    async getPagination(context, { page = 1, perPage = 5 }) {
-      context.commit("setLoading", true);
-      const data = await getData(PRODUCT.pagination_product(page, perPage));
-      context.commit("setProduct", data);
-      context.commit("setLoading", false);
-    },
+
     async deleteProduct(context, id) {
       context.commit("setLoading", true);
       await deleteData(PRODUCT.delete_product(id));

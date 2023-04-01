@@ -15,8 +15,6 @@ const PRODUCT = {
   delete_product: (id) => `/api/product/${id}`,
   put_product: "/api/product",
   one_product: (id) => `/api/product/${id}`,
-  pagination_product: (page = 1, perPage = 5) =>
-    `/api/product?page=${page}&perPage=${perPage}`,
 };
 
 const CATEGORY = {
